@@ -5,20 +5,15 @@ import java.time.LocalDate;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.sun.tools.javac.Main;
-
 import dao.EventoDAO;
+import lombok.extern.slf4j.Slf4j;
 import utils.JpaUtil;
 
+@Slf4j
 public class Main1 {
-	private static Logger logger = LoggerFactory.getLogger(Main.class);
 	private static EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
 
 	public static void main(String[] args) {
-		logger.info("prova");
 		EntityManager em = emf.createEntityManager();
 		EventoDAO ed = new EventoDAO(em);
 

@@ -4,7 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 import esercizio.Evento;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class EventoDAO {
 
 	private final EntityManager em;
